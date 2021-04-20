@@ -10,11 +10,41 @@ import {
 
 let client: LanguageClient;
 
+
 vscode.languages.registerHoverProvider('pipeql', {
 	provideHover(document, position, token) {
-	  return {
-		contents: ['Hover Content']
-	  };
+		const range = document.getWordRangeAtPosition(position);
+        const word = document.getText(range);
+
+		let val = "";
+		switch(word) {
+			case "csv": val = "CSV Variable Declaration"; break;
+			case "query": val = "Query Declaration"; break;
+			case "import": val = "Import Statement"; break;
+			case "print": val = "Print Pipe"; break;
+			case "asc": val = "Ascend Pipe"; break;
+			case "desc": val = "Descend Pipe"; break;
+			case "select": val = "Select Pipe"; break;
+			case "reform": val = "Reform Pipe"; break;
+			case "update": val = "Update Pipe"; break;
+			case "write": val = "Write Pipe"; break;
+			case "note": val = "Note Pipe"; break;
+			case "unique": val = "Unique Pipe"; break;
+			case "error": val = "Error Pipe"; break;
+			case "id": val = "ID Entry Operator"; break;
+			case "arity": val = "Arity Entry Operator"; break;
+			case "if": val = "If Control"; break;
+			case " x ": val = "Cross-Product Pipe"; break;
+			case "++": val = "Union Pipe"; break;
+			case "--": val = "Difference Pipe"; break;
+		}
+		
+		if(val != "") {
+			return new vscode.Hover({
+				language: "PipeQL language",
+				value: val
+			});
+		}
 	}
   });
 
