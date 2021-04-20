@@ -4,8 +4,10 @@ Implemented as a VSCode extension in Node.js
 ## Functionality
 
 This Language Server works for .cql files. It has the following language features:
-- Completions
-- Hover
+- Keyword Auto-Completions
+- Hovers
+- Folding
+- Syntax Highlighting (for any TextMate editor)
 
 
 ## Structure
