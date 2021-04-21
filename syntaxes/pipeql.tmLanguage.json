@@ -50,7 +50,7 @@
 		"numbers": {
 			"patterns": [{
 				"name": "entity.name.function.pipeql",
-				"match": "(\\b\\d+|id|arity)"
+				"match": "(\\b\\d+|id|arity|true|false)"
 			}]
 		}
 	},
