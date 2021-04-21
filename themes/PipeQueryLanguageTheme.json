@@ -1,0 +1,74 @@
+{
+	"name": "PipeQL Theme",
+	"type": "dark",
+	"tokenColors": [
+		{
+			"scope": [
+				"comment"
+			],
+			"settings": {
+				"foreground": "#6eb028",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"scope": [
+				"punctuation"
+			],
+			"settings": {
+				"foreground": "#D4BE98"
+			}
+		},
+	
+		{
+			"scope": [
+				"string.quoted"
+			],
+			"settings": {
+				"foreground": "#e19955"
+			}
+		},
+		{
+			"scope": [
+				"keyword"
+			],
+			"settings": {
+				"foreground": "#ff679e"
+			}
+		},
+		{
+			"scope": [
+				"variable"
+			],
+			"settings": {
+				"foreground": "#35b5ff"
+			}
+		},
+		{
+			"scope": [
+				"entity.name.function"
+			],
+			"settings": {
+				"foreground": "#a7ab43"
+			}
+		},
+		{
+			"scope": [
+				"invalid",
+				"token.error-token"
+			],
+			"settings": {
+				"foreground": "#AA2A2A",
+				"fontStyle": "underline"
+			}
+		}
+	]
+}
+	// {
+		// 	"scope": [
+		// 		"source"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#D4BFA0"
+		// 	}
+		// },

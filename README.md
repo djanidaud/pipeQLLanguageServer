@@ -1,28 +1,37 @@
 # PipeQL Language Server
-Implemented as a VSCode extension in Node.js
+Implemented as a VS Code extension in Node.js
 
 ## Functionality
 
 This Language Server works for .cql files. It has the following language features:
-- Completions
-- Hover
+- Keyword Auto-Completions
+- Hovers
+- Folding
+- Syntax Highlighting (for any TextMate editor)
 
 
 ## Structure
 
 ```
-.
 ├── client // Language Client
-│   ├── src
-│   │   ├── test // End to End tests for Language Client / Server
-│   │   └── extension.ts // Language Client entry point
+│   └── src
+│       └── extension.ts // Language Client entry point
+│       
+├── themes 
+|     └── PipeQueryLanguageTheme.json // Official Colour Theme
+|
+├── syntaxes
+│     └── pipeql.tmLanguage.json // Syntax Highlighting
+|
+├──  language-configuration.json // Language  Configuration
+│ 
 ├── package.json // The extension manifest.
 └── server // Language Server
     └── src
         └── server.ts // Language Server entry point
 ```
 
-## Running the Sample
+## Running the extension
 
 - Run `npm install` in this folder. This installs all necessary npm modules in both the client and server folder
 - Open VS Code on this folder.
@@ -30,8 +39,9 @@ This Language Server works for .cql files. It has the following language feature
 - Switch to the Debug viewlet.
 - Select `Launch Client` from the drop down.
 - Run the launch config.
-- If you want to debug the server as well use the launch configuration `Attach to Server`
-- In the [Extension Development Host] instance of VSCode, open a document in 'plain text' language mode.
-  - Type `j` or `t` to see `Javascript` and `TypeScript` completion.
-  - Enter text content such as `AAA aaa BBB`. The extension will emit diagnostics for all words in all-uppercase.
+- Open a ".cql" file and start coding!
 
+
+## Install the extension
+
+- To start using your extension with Visual Studio Code copy it into the `<user home>/.vscode/extensions` folder and restart VS Code.

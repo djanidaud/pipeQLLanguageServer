@@ -1,0 +1,59 @@
+{
+	"name": "Pipe Query Language",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#numbers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.pipeql",
+				"match": "(select|update|import|reform|asc|desc|print)"
+			}]
+		},
+		"variable": {
+			"patterns": [{
+				"name": "variable.language.default.pipeql",
+				"match": "(csv|if|->)"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.pipeql",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pipeql",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comment": {
+			"patterns": [{
+				"name": "comment.pipeql",
+				"match": "(//.*)"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "entity.name.function.pipeql",
+				"match": "(\\b\\d+)"
+			}]
+		}
+	},
+	"scopeName": "source.pipeql"
+}
+

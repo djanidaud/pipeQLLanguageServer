@@ -14,9 +14,14 @@
 		"languages": [
 			{
 				"id": "pipeql",
+				"aliases": [
+					"Pipe Query Language",
+					"pipeql"
+				],
 				"extensions": [
 					".cql"
-				]
+				],
+				"configuration": "./language-configuration.json"
 			}
 		],
 		"configuration": {
@@ -30,7 +35,21 @@
 					"description": "Controls the maximum number of problems produced by the server."
 				}
 			}
-		}
+		},
+		"grammars": [
+			{
+				"language": "pipeql",
+				"scopeName": "source.pipeql",
+				"path": "./syntaxes/pipeql.tmLanguage.json"
+			}
+		],
+		"themes": [
+			{
+				"label": "Pipe Query Language Theme",
+				"uiTheme": "vs-dark",
+				"path": "./themes/PipeQueryLanguageTheme.json"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
