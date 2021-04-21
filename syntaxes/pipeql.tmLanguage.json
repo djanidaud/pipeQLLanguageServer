@@ -21,13 +21,13 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.pipeql",
-				"match": "(select|update|import|reform|asc|desc|print)"
+				"match": "(select|update|import|reform|asc|desc|print|write|note|unique|err)"
 			}]
 		},
 		"variable": {
 			"patterns": [{
 				"name": "variable.language.default.pipeql",
-				"match": "(csv|if|->)"
+				"match": "(csv|query|if|->)"
 			}]
 		},
 		"strings": {
@@ -50,7 +50,7 @@
 		"numbers": {
 			"patterns": [{
 				"name": "entity.name.function.pipeql",
-				"match": "(\\b\\d+)"
+				"match": "(\\b\\d+|id|arity)"
 			}]
 		}
 	},
