@@ -21,7 +21,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.pipeql",
-				"match": "(select|update|import|reform|asc|desc|print|write|note|unique|err)"
+				"match": "(select|update|import|reform|asc|desc|print|write|note|unique|error)"
 			}]
 		},
 		"variable": {
